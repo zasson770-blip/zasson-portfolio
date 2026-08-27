@@ -6,7 +6,44 @@
     <title>Zasson Portfolio</title>
 
     <style>
-nav {
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .project-card {
+        padding: 20px 15px;
+    }
+
+    .skill-list {
+        gap: 8px;
+    }
+
+    .skill {
+        padding: 12px 15px;
+    }
+
+}
+        nav {
     background-color: #222;
     color: white;
     padding: 15px 20px;
