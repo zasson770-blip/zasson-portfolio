@@ -1,201 +1,251 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html><head><title>Zasson Portfolio</title>
 
-<head>
+<style>
 
-    <title>Zasson Portfolio</title>
-
-    <style>
-@media (max-width: 600px) {
-
-    body {
-        padding: 10px;
+    * {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
     }
 
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        background-color: #eeeeee;
+        color: #222;
+    }
+
+    /* NAVIGATION */
+
     nav {
-        flex-direction: column;
-        gap: 10px;
+        background-color: #222;
+        color: white;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav h2 {
+        margin: 0;
     }
 
     nav a {
-        display: inline-block;
-        margin: 5px;
+        color: white;
+        text-decoration: none;
+        margin: 8px;
+        font-size: 16px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        max-width: 700px;
+        margin: auto;
+        padding: 80px 20px;
     }
 
     h1 {
-        font-size: 35px;
+        font-size: 45px;
     }
 
-    .hero {
-        padding: 30px 10px;
+    p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+
+    /* BUTTON */
+
+    button {
+        padding: 14px 25px;
+        font-size: 17px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #222;
+        color: white;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+
+    /* PROJECTS */
+
+    .projects {
+        max-width: 700px;
+        margin: 50px auto;
+        padding: 20px;
     }
 
     .project-card {
-        padding: 20px 15px;
+        background-color: white;
+        padding: 25px;
+        margin-top: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .project-card h3 {
+        font-size: 25px;
+    }
+
+    .project-card a {
+        text-decoration: none;
+    }
+
+
+    /* SKILLS */
+
+    .skills {
+        max-width: 700px;
+        margin: 50px auto;
+        padding: 20px;
     }
 
     .skill-list {
-        gap: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 20px;
     }
 
     .skill {
-        padding: 12px 15px;
+        background-color: white;
+        padding: 15px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.12);
     }
 
-}
+
+    /* ABOUT */
+
+    .about {
+        max-width: 700px;
+        margin: 50px auto;
+        padding: 25px;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+        max-width: 700px;
+        margin: 50px auto;
+        padding: 25px;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
         nav {
-    background-color: #222;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-nav h2 {
-    margin: 0;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 8px;
-    font-size: 16px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 30px 20px;
-            background-color: #eeeeee;
-            color: #222;
+            flex-direction: column;
+            gap: 10px;
         }
 
-        .hero {
-            max-width: 600px;
-            margin: auto;
-            padding: 40px 20px;
+        nav a {
+            display: inline-block;
+            margin: 5px;
         }
 
         h1 {
-            font-size: 45px;
+            font-size: 35px;
         }
 
-        p {
-            font-size: 18px;
-            line-height: 1.7;
+        .hero {
+            padding: 60px 15px;
         }
 
-        button {
-            padding: 14px 25px;
-            font-size: 17px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            background-color: #222;
-            color: white;
-        }
-
-        /* PROJECTS */
-
-        .projects {
-            max-width: 700px;
-            margin: 50px auto;
+        .projects,
+        .skills,
+        .about,
+        .contact {
+            padding: 15px;
         }
 
         .project-card {
-            background-color: white;
-            padding: 25px;
-            margin-top: 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-        }
-
-        .project-card h3 {
-            font-size: 25px;
-        }
-
-        .project-card a {
-            text-decoration: none;
-        }
-
-        /* SKILLS */
-
-        .skills {
-            max-width: 700px;
-            margin: 50px auto;
+            padding: 20px 15px;
         }
 
         .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 20px;
+            gap: 8px;
         }
 
         .skill {
-            background-color: white;
-            padding: 15px 20px;
-            border-radius: 10px;
-            font-weight: bold;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+            padding: 12px 15px;
         }
 
-        /* ABOUT */
+    }
 
-        .about {
-            max-width: 700px;
-            margin: 50px auto;
-            padding: 25px;
-        }
+</style>
 
-        /* CONTACT */
+</head><body><!-- NAVIGATION -->
 
-        .contact {
-            max-width: 700px;
-            margin: 50px auto;
-            padding: 25px;
-        }
+<nav>
 
-        .contact button {
-            background-color: #222;
-            color: white;
-        }
+    <h2>ZASSON 👨‍💻</h2>
 
-    </style>
+    <div>
 
-</head>
+        <a href="#home">Home</a>
 
-<body>
+        <a href="#projects">Projects</a>
 
-    <!-- HERO -->
+        <a href="#skills">Skills</a>
 
-    <div class="hero" id="home">
+        <a href="#about">About</a>
 
-        <h1>Hi, I'm Zasson 👋</h1>
+        <a href="#contact">Contact</a>
 
-        <h2>Software Developer</h2>
+    </div>
 
-        <p>
-            I build useful websites
-            and simple applications.
-        </p>
+</nav>
+
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+
+    <h1>Hi, I'm Zasson 👋</h1>
+
+    <h2>Software Developer</h2>
+
+    <p>
+        I build useful websites
+        and simple applications.
+    </p>
+
+    <a href="#projects">
 
         <button>
             View My Projects
         </button>
 
-    </div>
+    </a>
+
+</div>
 
 
-    <!-- PROJECTS -->
+<!-- PROJECTS -->
 
-    <section class="projects" id="projects">
+<section class="projects" id="projects">
 
     <h2>My Projects 🚀</h2>
 
@@ -258,7 +308,7 @@ nav a:hover {
 
         <p>
             An expense tracking application with
-            total calculation, delete feature and LocalStorage.
+            total calculation, Delete and LocalStorage.
         </p>
 
         <a
@@ -274,81 +324,66 @@ nav a:hover {
 
     </div>
 
-    </section>
+</section>
 
 
-    <!-- SKILLS -->
+<!-- SKILLS -->
 
-    <section class="skills" id="skills">
+<section class="skills" id="skills">
 
-        <h2>My Skills 🛠️</h2>
+    <h2>My Skills 🛠️</h2>
 
-        <div class="skill-list">
+    <div class="skill-list">
 
-            <div class="skill">HTML</div>
+        <div class="skill">HTML</div>
 
-            <div class="skill">CSS</div>
+        <div class="skill">CSS</div>
 
-            <div class="skill">JavaScript</div>
+        <div class="skill">JavaScript</div>
 
-            <div class="skill">API Integration</div>
+        <div class="skill">API Integration</div>
 
-            <div class="skill">Git & GitHub</div>
+        <div class="skill">Git & GitHub</div>
 
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section class="about" id="about">
-
-        <h2>About Me 👨‍💻</h2>
-
-        <p>
-            I'm Zasson, a beginner software developer
-            learning how to build useful web applications.
-            I enjoy creating simple projects and learning
-            new technologies.
-        </p>
-
-    </section>
-
-
-    <!-- CONTACT-->
-
-    <section class="contact" id="contact">
-       
-    <h2>Contact Me 📩</h2>
-
-
-        <p>
-            Interested in working together?
-        </p>
-
-        <a href="mailto:zasson770@gmail.com">
-
-            <button>
-                Send Me an Email
-            </button>
-
-        </a>
-
-    </section>
-
-</body>
-<nav>
-
-    <h2>ZASSON 👨‍💻</h2>
-
-    <div>
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
     </div>
 
-</nav>
-  </html>
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2>About Me 👨‍💻</h2>
+
+    <p>
+        I'm Zasson, a beginner software developer
+        learning how to build useful web applications.
+        I enjoy creating simple projects and learning
+        new technologies.
+    </p>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2>Contact Me 📩</h2>
+
+    <p>
+        Interested in working together?
+    </p>
+
+    <a href="mailto:zasson770@gmail.com">
+
+        <button>
+            Send Me an Email
+        </button>
+
+    </a>
+
+</section>
+
+</body></html>
